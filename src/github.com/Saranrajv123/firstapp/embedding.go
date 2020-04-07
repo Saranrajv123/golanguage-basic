@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 type Animal struct {
@@ -16,7 +17,7 @@ type bird struct {
 }
 
 type cars struct {
-	name string `required`
+	name   string `required`
 	engine string
 }
 
@@ -28,12 +29,18 @@ func main() {
 		eat:    "rice",
 	}
 
-	car := cars {
-		name: "",
-		engine: ""
+	car := cars{
+		name:   "",
+		engine: "",
 	}
 
+	ref := reflect.TypeOf(cars{})
+	fmt.Println("ref", ref)
+
+	field, _ := ref.FieldByName("name")
+	fmt.Println("field", field.Tag)
+
 	fmt.Println(b)
-	fmt.Println('car', car)
+	fmt.Println("car", car)
 
 }
