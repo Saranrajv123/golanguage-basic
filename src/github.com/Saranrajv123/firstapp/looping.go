@@ -89,5 +89,4 @@ func main() {
 	for key, value := range statePopulation {
 		fmt.Println("state and population", key, value)
 	}
-
 }
