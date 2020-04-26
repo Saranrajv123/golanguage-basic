@@ -47,7 +47,7 @@ func sub(values ...int) (result int) { /* this way you can return value explicit
 	return /* no need specific the return varaible in return - result  */
 }
 
-// func sum(values ...int) { /*  veridict parameter like spread operators */
+// func sum(  ...int) { /*  veridict parameter like spread operators */
 // 	fmt.Println(values, "values")
 // 	result := 0
 // 	for _, v := range values { /* if you are not use _ in for loop it takes only 5 values  */
@@ -71,4 +71,3 @@ func divideHandlingFunc(a, b float64) (float64, error) {
 	}
 	return a / b, nil
 }
-
